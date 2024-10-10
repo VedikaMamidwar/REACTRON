@@ -1,27 +1,27 @@
 import React from 'react';
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className="navbar">
       REACTRON
       <nav>
-        <ul>
-          <a href="/"> 
-            <li className="navlinks">home</li>
-          </a>
-          <a href="/about"> 
-            <li className="navlinks">about</li>
-          </a>
-          <a href="/contact"> 
-            <li className="navlinks">contact</li>
-          </a>
-          <a href="/feedback"> 
-            <li className="navlinks">Feedback</li>
-          </a>
-        </ul>
-      </nav>
-      
+            <ul>
+                <li>
+                    <Link to="/">Home</Link> 
+                </li>
+                <li>
+                    <Link to="/about">About</Link>
+                </li>
+                <li>
+                    <Link to="/contact">Contact</Link>
+                </li>
+                <li>
+                    <Link to="/feedback">Feedback</Link>
+                </li>
+            </ul>
+        </nav>
     </div>
   );
 }
