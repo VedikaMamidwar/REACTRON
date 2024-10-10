@@ -1,0 +1,15 @@
+.my-button {
+    background-color: #4dcb9c; 
+    color: rgb(13, 12, 12);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+   
+    justify-content: center;
+  }
+  
+  .my-button:hover {
+    background-color: #07f399; 
+  }
+  
