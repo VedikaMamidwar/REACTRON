@@ -1,7 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './views/home/home';
 import About from './views/about/about';
@@ -10,25 +8,18 @@ import Feedback from './views/feedback/feedback';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Home />,
-    },
-    {
-        path: '/about',
-        element: <About />,
-    },
-    {
-        path: '/contact',
-        element: <Contact />,
-    },
-    {
-        path: '/feedback',
-        element: <Feedback />,
-    }
-]);
+const currentPath = window.location.pathname;
 
-root.render(
-    <RouterProvider router={router} />
-);
+if (currentPath === "/") {
+    root.render(<Home />);
+} else if (currentPath === "/about") {
+    root.render(<About />);
+} else if (currentPath === "/contact") {
+    root.render(<Contact />);
+} else if (currentPath === "/feedback") { 
+    root.render(<Feedback />); 
+} else {
+    root.render(<h1>404 Not Found</h1>); 
+}
+
+

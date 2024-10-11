@@ -3,11 +3,11 @@ import Navbar from '../../Components/navbar/navbar';
 import feedbackImage from '../../views/feedback/feedback.png';
 import './feedback.css';
 
-function Feedback() { // Capitalized the function name
+function Feedback() { 
   return (
     <div>
       <Navbar />
-      <h1>Feedback</h1> {/* Corrected capitalization */}
+      <h1>Feedback</h1> 
       <img src={feedbackImage} alt="Feedback" className="header-image" />
     </div>
   );

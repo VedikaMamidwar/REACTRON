@@ -16,7 +16,7 @@ function Home() {
       }}>
         Click me!!
       </button>
-      <Toaster position:top-left />
+      <Toaster  />
     </div>
   );
 }
