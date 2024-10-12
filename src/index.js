@@ -1,25 +1,40 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './views/home/home';
 import About from './views/about/about';
 import Contact from './views/contact/contact';
-import Feedback from './views/feedback/feedback'; 
+import Feedback from './views/feedback/feedback';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/feedback",
+    element: <Feedback />,
+  },
+  {
+    path: "*", 
+    element: <h1>404 Not Found</h1>,
+  },
+]);
 
-const currentPath = window.location.pathname;
-
-if (currentPath === "/") {
-    root.render(<Home />);
-} else if (currentPath === "/about") {
-    root.render(<About />);
-} else if (currentPath === "/contact") {
-    root.render(<Contact />);
-} else if (currentPath === "/feedback") { 
-    root.render(<Feedback />); 
-} else {
-    root.render(<h1>404 Not Found</h1>); 
-}
 
 
+root.render(
+  
+    <RouterProvider router={router} />
+  
+);
